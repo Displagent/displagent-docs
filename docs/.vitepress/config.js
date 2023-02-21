@@ -13,7 +13,7 @@ export default {
                 text: 'Setup',
                 items: [
                   { text: 'Intro', link: '/setup/' },
-                  { text: 'Required Credentials', link: '/guide/one' },
+                  { text: 'Required Credentials', link: '/setup/required-credentials' },
                   { text: 'Azure App Registration', link: '/' },
                   { text: 'Power BI Service Account', link: '/' }
                 ]

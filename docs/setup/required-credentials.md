@@ -1,0 +1,42 @@
+# Required Credentials
+
+In order for Displagent to access and embed your Power BI content, it requires five credentials from you:
+
+* Azure App Registration
+    * Azure Tenant ID
+    * Azure App ID
+    * Azure App Secret
+* Power BI Service account
+    * Username
+    * Password
+
+
+These are discussed in more details below and in the following pages.
+
+## Encryption
+
+Let's get the most important question out of the way first: if you give Displagent the five credentials above, where are they stored?
+
+The answer is: they are stored on your own machines - you can't get much safer than that!
+
+This is actually the primary motivation behind why I changed Displagent from a web application to a cross-platform desktop application: as a desktop application, Displagent can take these credentials and store them locally on your machine as a credentials file.
+
+Even better, Displagent also uses your machine's operating system to **encrypt** the credentials file once they are stored - just in case anyone on your machine goes snooping around for them!
+
+In summary, here is what your IT Department wants to hear: these credentials are NOT stored in Displagent's database or backend - anywhere. They are yours, they stay with you, and they are encrypted on your own machines.
+
+## Azure App Registration
+
+As per Microsoft's own recommendation, the easiest, least-painful, and most reliable way to authenticate a third-party application to your Power BI tenant is by creating an Azure App Registration in your company's Azure tenant.
+
+Think of an Azure App Registration like a virtual gateway; using its associated credentials, you can allow a custom application to access your Power BI content.
+
+This is exactly how Displagent accesses your Power BI content. See the dedicated docpage for how to set this up here.
+
+## Power BI Service Account
+
+Additionally, it is **highly recommended** - though not _technically required_ - to create a dedicated service account in your company's Azure Active Directory.
+
+This service account will be used alongside your Azure App Registration to access your Power BI content. All you need is a username, a password, and a Power BI license.
+
+If you are unsure of what kind of license to assign this service account, think about where your Power BI content that you want to embed is stored: is it stored in a normal, shared-capacity workspace, or is it stored in Premium workspace?
