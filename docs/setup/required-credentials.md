@@ -23,7 +23,9 @@ This is actually the primary motivation behind why I changed Displagent from a w
 
 Even better, Displagent also uses your machine's operating system to **encrypt** the credentials file once they are stored - just in case anyone on your machine goes snooping around for them!
 
-In summary, here is what your IT Department wants to hear: these credentials are NOT stored in Displagent's database or backend - anywhere. They are yours, they stay with you, and they are encrypted on your own machines.
+::: tip TL;DR;
+In summary, these credentials are NOT stored in Displagent's database or backend - anywhere. They are yours, they stay with you, and they are encrypted on your own machines.
+:::
 
 ## Azure App Registration
 
@@ -31,12 +33,26 @@ As per Microsoft's own recommendation, the easiest, least-painful, and most reli
 
 Think of an Azure App Registration like a virtual gateway; using its associated credentials, you can allow a custom application to access your Power BI content.
 
-This is exactly how Displagent accesses your Power BI content. See the dedicated docpage for how to set this up here.
+This is exactly how Displagent accesses your Power BI content. See the dedicated docpage for how to set this up.
 
 ## Power BI Service Account
 
-Additionally, it is **highly recommended** - though not _technically required_ - to create a dedicated service account in your company's Azure Active Directory.
+Additionally, it is **highly recommended** - though not _technically required_ - to provision a dedicated service account in your company's Azure Active Directory.
 
 This service account will be used alongside your Azure App Registration to access your Power BI content. All you need is a username, a password, and a Power BI license.
 
-If you are unsure of what kind of license to assign this service account, think about where your Power BI content that you want to embed is stored: is it stored in a normal, shared-capacity workspace, or is it stored in Premium workspace?
+::: warning
+If you cannot currently provision a service account, don't worry: you can use your own Power BI account if you wish. However, to avoid dependencies on any one employee's active directory account, I highly stress provisioning a service account for uninterrupted usage.
+:::
+
+### Service Account Licensing
+
+Like all Power BI users, your service account will require a Power BI license to be assigned to it from your Microsoft 365 admin. The type of Power BI license your service account requires is dependent on what Power BI content you want to access through it - in particular, what types of workspaces your Power BI content resides in.
+
+For standard, shared-capacity workspaces, a Power BI Pro license is sufficient here. And if you have Power BI Premium, you don't have to worry about this at all because your entire tenant runs off of dedicated capacities.
+
+However, if your company utilizes Power BI Premium Per User to access some of this content, then your service account will likely also need a Power BI Premium Per User license.
+
+::: tip TL;DR;
+In general, an easy rule of thumb is to give your service account the same license type that your other Power BI users have. At the end of the day, what matters most is knowing whether or not your content resides in a dedicated workspace. If it does not, a Power BI Pro license will probably do the job.
+:::
