@@ -29,7 +29,7 @@ In summary, these credentials are NOT stored in Displagent's database or backend
 
 ## Azure App Registration
 
-As per Microsoft's own recommendation, the easiest, least-painful, and most reliable way to authenticate a third-party application to your Power BI tenant is by creating an Azure App Registration in your company's Azure tenant.
+[As per Microsoft's own recommendation](https://learn.microsoft.com/en-us/power-bi/developer/embedded/register-app?tabs=customers), the easiest, least-painful, and most reliable way to authenticate a third-party application to your Power BI tenant is by creating an Azure App Registration in your company's Azure tenant.
 
 Think of an Azure App Registration like a virtual gateway; using its associated credentials, you can allow a custom application to access your Power BI content.
 

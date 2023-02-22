@@ -25,8 +25,8 @@ export default {
                 items: [
                   { text: 'Intro', link: '/setup/' },
                   { text: 'Required Credentials', link: '/setup/required-credentials' },
+                  { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
                   { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
-                  { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' }
                 ]
               }
             ],
