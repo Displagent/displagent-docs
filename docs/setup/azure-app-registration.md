@@ -43,7 +43,7 @@ Once on the `App registrations` page, click the `Displagent` app. Then navigate 
 
 A new dialogue box should appear on the page with a Description textbox and an Expires dropdown.
 
-In the Description textbox, add a short description such as `For Displagent`. In the Expires dropdown, choose a desirable expiry date. In the screenshot below, I have chosen a default expiry of `2 years`.
+In the Description textbox, add a short description such as `For Displagent`. In the Expires dropdown, choose a desirable expiry date.
 
 ::: warning MARK THIS IN YOUR CALENDAR!
 This is VERY IMPORTANT that you remember this expiry! When this secret key expires, Displagent will NOT be able to access your Power BI content.
@@ -58,7 +58,7 @@ Then click the `Add` button.
 You should now see a new row appear for your newly-created secret. You need the cryptographic string from the `Value` column located next to the `Secret ID` column.
 
 ::: tip Save this for later
-Save or copy this secret credential! Again, you want the string from the `Value` column.
+Save or copy this secret credential from the `Value` column! **It will NOT appear again!**
 :::
 
 Now, look to the left-hand side navbar and click the `Overview` tab of the Azure App Registration.
@@ -70,6 +70,18 @@ Save or copy these two GUIDs!
 :::
 
 ![](./azure-app-registration-guids.png)
+
+## Grant Admin Consent
+
+One last thing: on the left-hand side navbar, navigate to the `API permissions` page.
+
+In the middle of the page, you should see a checkmark button called `Grant admin consent for <your domain here>`. Click that checkmark button.
+
+::: tip What is this?
+This setting auto-allows your Power BI service account to use your new Azure App Registration programatically.
+:::
+
+![](./azure-app-registration-grant-admin-consent.png)
 
 ## Save IDs
 
