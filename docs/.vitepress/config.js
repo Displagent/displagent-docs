@@ -3,7 +3,18 @@ export default {
     description: 'The official docsite for Displagent.',
     cleanUrls: true,
     themeConfig: {
-        logo: '/my-logo.svg',
+        logo: '/logo.png',
+        head: [
+          [
+            'script',
+            { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-ZYJNTMM4SR' }
+          ],
+          [
+            'script',
+            {},
+            "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZYJNTMM4SR')"
+          ]
+        ],
         nav: [
             { text: 'Setup', link: '/setup/' }
         ],
@@ -14,11 +25,13 @@ export default {
                 items: [
                   { text: 'Intro', link: '/setup/' },
                   { text: 'Required Credentials', link: '/setup/required-credentials' },
-                  { text: 'Azure App Registration', link: '/' },
-                  { text: 'Power BI Service Account', link: '/' }
+                  { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
+                  { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' }
                 ]
               }
             ],
-        }
+        },
+        outline: [2,6],
+        lastUpdatedText: 'Last Updated'
       }
 }
