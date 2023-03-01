@@ -4,6 +4,10 @@ export default {
     cleanUrls: true,
     head: [
       [
+        'link',
+        { rel: 'icon', href: '/logo.svg' }
+      ],
+      [
         'script',
         { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-ZYJNTMM4SR' }
       ],
@@ -14,24 +18,24 @@ export default {
       ]
     ],
     themeConfig: {
-        logo: '/logo.png',
-        nav: [
-            { text: 'Setup', link: '/setup/' }
-        ],
-        sidebar: {
-            '/setup/': [
-              {
-                text: 'Setup',
-                items: [
-                  { text: 'Intro', link: '/setup/' },
-                  { text: 'Required Credentials', link: '/setup/required-credentials' },
-                  { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
-                  { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
-                ]
-              }
-            ],
-        },
-        outline: [2,6],
-        lastUpdatedText: 'Last Updated'
-      }
+      logo: '/logo.svg',
+      nav: [
+          { text: 'Setup', link: '/setup/' }
+      ],
+      sidebar: {
+          '/setup/': [
+            {
+              text: 'Setup',
+              items: [
+                { text: 'Intro', link: '/setup/' },
+                { text: 'Required Credentials', link: '/setup/required-credentials' },
+                { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
+                { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
+              ]
+            }
+          ],
+      },
+      outline: [2,6],
+      lastUpdatedText: 'Last Updated'
+    }
 }
