@@ -7,3 +7,10 @@
     --vp-c-border: rgba(60, 60, 67, 0.29);
   }
   
+  .medium-zoom-overlay {
+    z-index: 20;
+  }
+  
+  .medium-zoom-image {
+    z-index: 21;
+  }

@@ -20,7 +20,8 @@ export default {
     themeConfig: {
       logo: '/logo.svg',
       nav: [
-          { text: 'Setup', link: '/setup/' }
+          { text: 'Setup', link: '/setup/' },
+          { text: 'Report Slideshows', link: '/report-slideshows/' }
       ],
       sidebar: {
           '/setup/': [
@@ -34,6 +35,19 @@ export default {
               ]
             }
           ],
+          '/report-slideshows/': [
+            {
+              text: 'Report Slideshows',
+              items: [
+                { text: 'Intro', link: '/report-slideshows/' },
+                { text: 'The Report Slideshows Table', link: '/report-slideshows/report-slideshows-table' },
+                { text: 'Create a Report Slideshow', link: '/report-slideshows/create-report-slideshow' },
+                { text: 'Build a Report Slideshow', link: '/report-slideshows/build-report-slideshow' },
+                { text: 'Launch a Report Slideshow', link: '/report-slideshows/launch-report-slideshow' },
+                {  text: 'Delete a Report Slideshow', link: '/report-slideshows/delete-report-slideshow' }
+              ]
+            }
+          ]
       },
       outline: [2,6],
       lastUpdatedText: 'Last Updated'
