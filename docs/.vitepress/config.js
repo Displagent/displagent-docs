@@ -5,7 +5,8 @@ export default {
     head: [
       [
         'link',
-        { rel: 'icon', href: '/logo.svg' }
+        // { rel: 'icon', href: '/logo.svg' },
+        { rel: 'icon', href: '/assets/favicons/favicon.ico' }
       ],
       [
         'script',
