@@ -13,6 +13,10 @@ On a slideshow's Build Slideshow page, there is a slideshow control panel in the
 </p>
 
 ::: tip
+To exit fullscreen mode, simply press the `Escape` key.
+:::
+
+::: tip
 There is also a `Stop` button, a `Re-embed report` button, and a `Refresh` button. Be advised, however, that the `Refresh` button only works up to every 15 seconds.
 :::
 

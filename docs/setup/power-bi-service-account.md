@@ -15,6 +15,10 @@ I have provided some useful links on this page for you to easily navigate to the
 If possible, it would be beneficial to set a non-expirying password for the service account. Should the password change, you will need to come back through your Displagent installations and update this value.
 :::
 
+::: danger Multi-factor Authentication Reminder
+If the Power BI serivce account that you choose to use requires multi-factor authentication, Displagent will NOT be able to authenticate you to Microsoft and the entire app will not work. Unfortunately, this is not a limitation of Displagent but rather [a limitation within Microsoft's authentication platform](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc).
+:::
+
 ## Microsft 365 Admin Portal
 
 ### Licensing

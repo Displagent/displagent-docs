@@ -56,3 +56,11 @@ However, if your company utilizes Power BI Premium Per User to access some of th
 ::: tip TL;DR;
 In general, an easy rule of thumb is to give your service account the same license type that your other Power BI users have. At the end of the day, what matters most is knowing whether or not your content resides in a dedicated workspace. If it does not, a Power BI Pro license will probably do the job.
 :::
+
+### Multi-factor Authentication
+
+If the Power BI serivce account that you choose to use requires multi-factor authentication, then Displagent will NOT be able to authenticate you to Microsoft and the entire app will not work. Unfortunately, this is not a limitation of Displagent but rather [a limitation within Microsoft's authentication platform](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc).
+
+::: danger Multi-factor Authentication
+MFA is not supported, so if MFA is required at your company, see if you can provision a service account for Displagent with an MFA exception and restricted Azure access for added protection.
+:::
