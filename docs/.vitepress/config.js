@@ -23,7 +23,8 @@ export default {
       nav: [
           { text: 'Setup', link: '/setup/' },
           { text: 'Report Slideshows', link: '/report-slideshows/' },
-          { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'}
+          { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
+          { text: 'Autolaunch', link: '/autolaunch/' }
       ],
       sidebar: {
           '/setup/': [
@@ -59,6 +60,15 @@ export default {
                 { text: 'Create a Dashboard Slideshow', link: '/dashboard-slideshows/create-dashboard-slideshow' },
                 { text: 'Launch a Dashboard Slideshow', link: '/dashboard-slideshows/launch-dashboard-slideshow' },
                 { text: 'Delete a Dashboard Slideshow', link: '/dashboard-slideshows/delete-dashboard-slideshow' }
+              ]
+            }
+          ],
+          '/autolaunch/': [
+            {
+              text: 'Autolaunch',
+              items: [
+                { text: 'Intro', link: '/autolaunch/' },
+                { text: 'Autolaunch Settings', link: '/autolaunch/autolaunch-settings' }
               ]
             }
           ]
