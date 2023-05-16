@@ -22,7 +22,8 @@ export default {
       logo: '/logo.svg',
       nav: [
           { text: 'Setup', link: '/setup/' },
-          { text: 'Report Slideshows', link: '/report-slideshows/' }
+          { text: 'Report Slideshows', link: '/report-slideshows/' },
+          { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'}
       ],
       sidebar: {
           '/setup/': [
@@ -45,7 +46,19 @@ export default {
                 { text: 'Create a Report Slideshow', link: '/report-slideshows/create-report-slideshow' },
                 { text: 'Build a Report Slideshow', link: '/report-slideshows/build-report-slideshow' },
                 { text: 'Launch a Report Slideshow', link: '/report-slideshows/launch-report-slideshow' },
-                {  text: 'Delete a Report Slideshow', link: '/report-slideshows/delete-report-slideshow' }
+                { text: 'Delete a Report Slideshow', link: '/report-slideshows/delete-report-slideshow' }
+              ]
+            }
+          ],
+          '/dashboard-slideshows/': [
+            {
+              text: 'Dashboard Slideshows',
+              items: [
+                { text: 'Intro', link: '/dashboard-slideshows/' },
+                { text: 'The Dashboard Slideshows Table', link: '/dashboard-slideshows/dashboard-slideshows-table' },
+                { text: 'Create a Dashboard Slideshow', link: '/dashboard-slideshows/create-dashboard-slideshow' },
+                { text: 'Launch a Dashboard Slideshow', link: '/dashboard-slideshows/launch-dashboard-slideshow' },
+                { text: 'Delete a Dashboard Slideshow', link: '/dashboard-slideshows/delete-dashboard-slideshow' }
               ]
             }
           ]
