@@ -24,7 +24,8 @@ export default {
           { text: 'Setup', link: '/setup/' },
           { text: 'Report Slideshows', link: '/report-slideshows/' },
           { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
-          { text: 'Autolaunch', link: '/autolaunch/' }
+          { text: 'Autolaunch', link: '/autolaunch/' },
+          { text: 'Utilities', link: '/utilities/' }
       ],
       sidebar: {
           '/setup/': [
