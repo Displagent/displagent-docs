@@ -56,6 +56,11 @@ Recall that a **report** bookmark is built into the actual Power BI report file 
 :::
 
 * `Nav Item ID`: the name of the slideshow item. It will be the name of either a report page/tab or a report bookmark.
+
+::: tip Hidden Report Pages
+Dispagent will indicate hidden pages/tabs by appending the word `(hidden)` onto the end of the name.
+:::
+
 * `Duation (s)`: the duration, in seconds, that the slideshow item should be displayed when the slideshow is launched.
 
 After choosing each configuration, click the `Save` button. Upon doing so, you should see the entire page refresh with the new slideshow item appearing in the slideshow items table at the top; you will also see the Power BI report re-embed itself onto the page.
