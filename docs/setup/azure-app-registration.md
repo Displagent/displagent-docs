@@ -14,19 +14,27 @@ At first glance, it might look a little overwhelming: don't worry! I have each s
 
 1. Please click the `Embed for your organization` button.
 
-![](./embed-for-your-organization-button.png)
+<p align="center">
+    <img src="./embed-for-your-organization-button.png" />
+</p>
 
 2. After clicking the button, you may be prompted to sign into Power BI; please do so.
 
-![](./embed-tool-signin-prompt.png)
+<p align="center">
+    <img src="./embed-tool-signin-prompt.png" />
+</p>
 
 3. In the Application Name textbox, please type `Displagent`. In the Home Page URL textbox, please type `https://localhost/`. Don't worry about the Redirect URL textbox.
 
-![](app-textbox-values.png)
+<p align="center">
+    <img src="app-textbox-values.png" />
+</p>
 
 4. Please check the required permissions as indicated in the screenshot below. Then click the `Register` button.
 
-![](./embed-tool-permissions.png)
+<p align="center">
+    <img src="./embed-tool-permissions.png" />
+</p>
 
 ## Fetch IDs
 
@@ -34,12 +42,18 @@ Now that you've created the Azure App Registration, you need to actually fetch i
 
 You can also navigate to this page by logging into the Azure Portal and typing `azure active directory` in the searchbar at the top and navigating to the `App registrations` page.
 
-![](./azure-portal-azure-active-directory-nav.png)
-![](./azure-portal-app-registrations-nav.png)
+<p align="center">
+    <img src="./azure-portal-azure-active-directory-nav.png" />
+</p>
+<p align="center">
+    <img src="./azure-portal-app-registrations-nav.png" />
+</p>
 
 Once on the `App registrations` page, click the `Displagent` app. Then navigate to the app's `Certificates & secrets` page. Click the `Client secrets` tab in the middle of the page, then click the `New client secret` button.
 
-![](./azure-portal-app-secrets-page-nav.png)
+<p align="center">
+    <img src="./azure-portal-app-secrets-page-nav.png" />
+</p>
 
 A new dialogue box should appear on the page with a Description textbox and an Expires dropdown.
 
@@ -69,7 +83,9 @@ On this tab, you will see several GUIDs near the top of the page: you need the `
 Save or copy these two GUIDs!
 :::
 
-![](./azure-app-registration-guids.png)
+<p align="center">
+    <img src="./azure-app-registration-guids.png" />
+</p>
 
 ## Grant Admin Consent
 
@@ -81,7 +97,9 @@ In the middle of the page, you should see a checkmark button called `Grant admin
 This setting auto-allows your Power BI service account to use your new Azure App Registration programatically.
 :::
 
-![](./azure-app-registration-grant-admin-consent.png)
+<p align="center">
+    <img src="./azure-app-registration-grant-admin-consent.png" />
+</p>
 
 ## Save IDs
 
@@ -93,5 +111,10 @@ To finalize this process, open Displagent, navigate to the `Encrypted Settings` 
 These sensitive security credentials are *NOT* stored in Displagent's database or backend. Instead, they are saved to a local credentials file **on your machine**, and they are encrypted for added security.
 :::
 
-![](./encrypted-settings-page-nav.png)
-![](./encrypted-settings-page-textboxes.png)
+<p align="center">
+    <img src="./encrypted-settings-page-nav.png" />
+</p>
+
+<p align="center">
+    <img src="./encrypted-settings-page-textboxes.png" />
+</p>
