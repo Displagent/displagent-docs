@@ -27,7 +27,7 @@ At first glance, it might look a little overwhelming: don't worry! I have each s
 3. In the Application Name textbox, please type `Displagent`. In the Home Page URL textbox, please type `https://localhost/`. Don't worry about the Redirect URL textbox.
 
 <p align="center">
-    <img src="app-textbox-values.png" />
+    <img src="./app-textbox-values.png" />
 </p>
 
 4. Please check the required permissions as indicated in the screenshot below. Then click the `Register` button.
