@@ -3,11 +3,11 @@ export default {
     description: 'The official docsite for Displagent.',
     cleanUrls: true,
     head: [
-      [
-        'link',
-        // { rel: 'icon', href: '/logo.svg' },
-        { rel: 'icon', href: '/assets/favicons/favicon.ico' }
-      ],
+      // [
+      //   'link',
+      //   // { rel: 'icon', href: '/logo.svg' },
+      //   { rel: 'icon', href: '/favicon.ico' }
+      // ],
       [
         'script',
         { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-ZYJNTMM4SR' }
