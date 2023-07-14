@@ -49,6 +49,8 @@ You can also navigate to this page by logging into the Azure Portal and typing `
     <img src="./azure-portal-app-registrations-nav.png" />
 </p>
 
+### Secret Value
+
 Once on the `App registrations` page, click the `Displagent` app. Then navigate to the app's `Certificates & secrets` page. Click the `Client secrets` tab in the middle of the page, then click the `New client secret` button.
 
 <p align="center">
@@ -69,11 +71,21 @@ Therefore, I **strongly recommend** two things:
 
 Then click the `Add` button.
 
-You should now see a new row appear for your newly-created secret. You need the cryptographic string from the `Value` column located next to the `Secret ID` column.
+You should now see a new row appear for your newly-created secret.
+
+::: warning Which column do I use?
+You need the cryptographic string from the `Value` column located next to the `Secret ID` column.
+:::
+
+<p align="center">
+    <img src="./azure-app-registration-secret-value-column.png" />
+</p>
 
 ::: tip Save this for later
 Save or copy this secret credential from the `Value` column! **It will NOT appear again!**
 :::
+
+### GUIDs
 
 Now, look to the left-hand side navbar and click the `Overview` tab of the Azure App Registration.
 
