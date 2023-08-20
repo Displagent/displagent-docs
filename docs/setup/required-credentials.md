@@ -21,7 +21,7 @@ The answer is: they are stored on your own machines - you can't get much safer t
 
 This is actually the primary motivation behind why I changed Displagent from a web application to a cross-platform desktop application: as a desktop application, Displagent can take these credentials and store them locally on your machine as a credentials file.
 
-Even better, Displagent also uses your machine's operating system to **encrypt** the credentials file once they are stored - just in case anyone on your machine goes snooping around for them!
+Even better, Displagent also **encrypts** the credentials file once they are stored - just in case anyone on your machine goes snooping around for them!
 
 ::: tip TL;DR;
 In summary, these credentials are NOT stored in Displagent's database or backend - anywhere. They are yours, they stay with you, and they are encrypted on your own machines.
