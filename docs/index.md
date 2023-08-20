@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /setup/
+      link: /setup/what-is-displagent
     - theme: alt
       text: Primary Website
       link: https://www.displagent.io
