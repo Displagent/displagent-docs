@@ -35,6 +35,7 @@ export default defineConfig({
             text: 'Setup',
             items: [
               { text: 'Intro', link: '/setup/' },
+              { text: 'What Is Displagent?', link: '/setup/what-is-displagent' },
               { text: 'Required Credentials', link: '/setup/required-credentials' },
               { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
               { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
