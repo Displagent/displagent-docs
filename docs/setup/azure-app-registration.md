@@ -113,6 +113,8 @@ This setting auto-allows your Power BI service account to use your new Azure App
     <img src="./azure-app-registration-grant-admin-consent.png" />
 </p>
 
+You will know that admin consent has been successfully granted when you see green check marks on the right-side `Status` column.
+
 ## Save IDs
 
 Congratulations! You should now have all of the necessary permissions requirements and security provisions necessary for Displagent to embed your content.
