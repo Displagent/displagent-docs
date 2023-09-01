@@ -1,3 +1,8 @@
+---
+title: Azure App Registration
+description: A detailed guide on how to setup an Azure App Registration for Displagent and save the credentials into the app.
+---
+
 # Azure App Registration
 
 This document outlines a step-by-step guide on how to create an Azure App Registration in your company's [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps).

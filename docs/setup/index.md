@@ -1,3 +1,8 @@
+---
+title: Displagent Setup
+description: A brief introduction to Displagent how to setup its required credentials.
+---
+
 # Displagent Setup
 
 These documents cover the basic credentials requirements for Displagent and how to set them up after installation.
