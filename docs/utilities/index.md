@@ -1,3 +1,8 @@
+---
+title: Utilities and Help
+description: An overview of the administrative, utility, and help functions found inside of Displagent.
+---
+
 # Utilities and Help
 
 There are some utilities and help links included in Displagent for housekeeping and troubleshooting.
