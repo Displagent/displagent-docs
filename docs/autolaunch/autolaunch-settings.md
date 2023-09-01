@@ -1,3 +1,8 @@
+---
+title: Autolaunch Settings
+description: A detailed guide on how to setup autolaunch and what its configurations are.
+---
+
 # Autolaunch Settings
 
 To navigate to the Autolaunch Settings page, open the nav menu on the left side and click the Autolaunch link.

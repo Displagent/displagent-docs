@@ -1,3 +1,8 @@
+---
+title: Autolaunch
+description: A brief guide on what autolaunch is and how to set it up inside of Displagent.
+---
+
 # Autolaunch
 
 Autolaunch is a feature which allows Displagent to automatically start a Slideshow and Slideshow Type of your choosing upon machine startup. This is an essential and highly-requested feature to give your display a true unattended, kiosk-like experience.
