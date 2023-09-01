@@ -82,5 +82,36 @@ export default defineConfig({
     },
     outline: [2,6],
     lastUpdatedText: 'Last Updated'
+  },
+  transformPageData(pageData, context) {
+    pageData.frontmatter.head ??= [];
+
+    // Add og:title meta tags.
+    const dynamicTitle = !pageData.title
+      ? context.siteConfig.site.title
+      : pageData.title;
+
+    const dynamicTitleTemplate = !pageData.titleTemplate
+      ? context.siteConfig.site.title
+      : pageData.titleTemplate;
+
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:title',
+        content: `${dynamicTitle} | ${dynamicTitleTemplate}`
+      }
+    ]);
+
+    // Add og:description meta tags.
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:description',
+        content: `${!pageData.description
+          ? context.siteConfig.site.description
+          : pageData.description }`
+      }
+    ]);
   }
 })

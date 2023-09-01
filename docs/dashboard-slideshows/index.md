@@ -1,3 +1,8 @@
+---
+title: Dashboard Slideshows
+description: An introduction to Dashboard Slideshows in Displagent.
+---
+
 # Dashboard Slideshows
 
 This section introduces you to Dashboard Slideshows and how to build them.

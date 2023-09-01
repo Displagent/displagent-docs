@@ -1,5 +1,6 @@
 ---
 layout: home
+titleTemplate: The official docsite for Displagent
 hero:
   name: Displagent Docs
   # text: Welcome

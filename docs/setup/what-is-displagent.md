@@ -1,3 +1,8 @@
+---
+title: What Is Displagent?
+description: An introduction into what Displagent is, why Displagent was built, and its common use cases.
+---
+
 # What Is Displagent?
 
 ## Distribution

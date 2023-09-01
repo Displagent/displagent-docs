@@ -1,3 +1,8 @@
+---
+title: Dashboard Slideshows Table
+description: An explanation of the main Dashboard Slideshows table in Displagent.
+---
+
 # Dashboard Slideshows Table
 
 On this page of the app, you will find a central table/datagrid for all Dashboard Slideshows. To navigate to it, open the navbar on the left-side of the app, expand the Slideshows group, and click on the Dashboard Slideshows link.

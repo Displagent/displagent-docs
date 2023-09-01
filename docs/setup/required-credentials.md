@@ -1,3 +1,8 @@
+---
+title: Required Credentials
+description: An overview of what credentials are required for Displagent to operate.
+---
+
 # Required Credentials
 
 In order for Displagent to access and embed your Power BI content, it requires five credentials from you:

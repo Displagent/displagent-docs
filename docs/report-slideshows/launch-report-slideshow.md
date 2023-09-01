@@ -1,3 +1,8 @@
+---
+title: Launch Report Slideshow
+description: A detailed guide on how to launch a Report Slideshow in Displagent.
+---
+
 # Launch Report Slideshow
 
 To launch a Report Slideshow, you have two options:

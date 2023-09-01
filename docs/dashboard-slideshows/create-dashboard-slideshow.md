@@ -1,3 +1,8 @@
+---
+title: Create a Dashboard Slideshow
+description: A detailed guide on how to create a new Dashboard Slideshow in Displagent.
+---
+
 # Create a Dashboard Slideshow
 
 The following steps below outline how to create a Dashboard Slideshow and its top-level configurations. 

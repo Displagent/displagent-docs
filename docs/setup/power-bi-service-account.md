@@ -1,3 +1,8 @@
+---
+title: Power BI Service Account
+description: A detailed guide on how to setup a Power BI service account for Displagent.
+---
+
 # Power BI Service Account
 
 This document outlines a step-by-step guide on how to provision a Power BI service account in your company's [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers).
