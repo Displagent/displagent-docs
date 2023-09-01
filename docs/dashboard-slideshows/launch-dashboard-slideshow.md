@@ -1,3 +1,8 @@
+---
+title: Launch Dashboard Slideshow
+description: A detailed guide on how to launch a Dashboard Slideshow in Displagent.
+---
+
 # Launch Dashboard Slideshow
 
 To launch a Dashboard Slideshow, click the slideshow's `play` button on the Dashboard Slideshows Table.
