@@ -1,4 +1,10 @@
 import { defineConfig } from 'vitepress'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import { SitemapStream } from 'sitemap'
+
+const hostname = 'https://docs.displagent.io';
+const links = [];
 
 export default defineConfig({
   title: 'Displagent Docs',
@@ -113,5 +119,25 @@ export default defineConfig({
           : pageData.description }`
       }
     ]);
-  }
+  },
+  // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id))
+      links.push({
+        // you might need to change this if not using clean urls mode
+        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+        lastmod: pageData.lastUpdated
+      })
+  },
+  // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({
+      hostname: hostname
+    })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach((link) => sitemap.write(link))
+    sitemap.end()
+    await new Promise((r) => writeStream.on('finish', r))
+  },
 })
