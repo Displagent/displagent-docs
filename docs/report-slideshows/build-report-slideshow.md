@@ -1,3 +1,8 @@
+---
+title: Build a Report Slideshow
+description: A detailed guide on how to build out a newly created Report Slideshow in Displagent.
+---
+
 # Build a Report Slideshow
 
 This section explains how to build each atomic piece of a Report Slideshow. To see top-level configurations for a Report Slideshow, please see the previous document.

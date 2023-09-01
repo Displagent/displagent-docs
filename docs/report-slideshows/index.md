@@ -1,3 +1,8 @@
+---
+title: Report Slideshows
+description: An introduction to Report Slideshows in Displagent.
+---
+
 # Report Slideshows
 
 This section introduces you to Report Slideshows and how to build them.

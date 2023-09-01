@@ -1,3 +1,8 @@
+---
+title: Create a Report Slideshow
+description: A detailed guide on how to create a new Report Slideshow in Displagent.
+---
+
 # Create a Report Slideshow
 
 The following steps below outline how to create a Report Slideshow and its top-level configurations. 

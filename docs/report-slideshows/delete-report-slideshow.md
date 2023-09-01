@@ -1,3 +1,8 @@
+---
+title: Delete Report Slideshow
+description: A detailed guide on how to delete a Report Slideshow in Displagent.
+---
+
 # Delete Report Slideshow
 
 To delete a Report Slideshow, go the main Report Slideshows Table, scroll to the far-right of the table, and click the slideshow row's `trash` button. A confirmation popup will appear asking you if you are sure that you want to delete the Report Slideshow. Confirm the deletion.

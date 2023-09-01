@@ -1,3 +1,8 @@
+---
+title: Report Slideshows Table
+description: An explanation of the main Report Slideshows table in Displagent.
+---
+
 # Report Slideshows Table
 
 On this page of the app, you will find a central table/datagrid for all Report Slideshows. To navigate to it, open the navbar on the left-side of the app, expand the Slideshows group, and click on the Report Slideshows link.
