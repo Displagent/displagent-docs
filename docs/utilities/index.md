@@ -7,9 +7,29 @@ description: An overview of the administrative, utility, and help functions foun
 
 There are some utilities and help links included in Displagent for housekeeping and troubleshooting.
 
+## Settings Menu
+
+When you click your email in the upper right-hand corner of the app, a dropdown menu with several settings will appear. Their actions are listed below:
+
+<p align="center">
+    <img src="./settings-dropdown-menu.png" />
+</p>
+
+* `Billing Settings`: opens the billing portal on your machine's default browser.
+
+::: tip
+The billing portal is currently hosted in Stripe. To login to your billing portal, Stripe will ask you to enter your email address. After submitting your email, Stripe will send you an email with a temporary link that you can click to login to the billing portal.
+:::
+
+* `Logout`: logs you out of the app and shuts the app down.
+
 ## Help Menu
 
 There is a help menu on the titlebar of the app. Below are its links and their usages:
+
+<p align="center">
+    <img src="./titlebar-help-menu.png" />
+</p>
 
 * `About`: opens a dialog box with metadata about the app (e.g. version).
 * `Open Logs`: automatically opens the file explorer on your system to the logs folder.
