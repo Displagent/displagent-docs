@@ -3,7 +3,10 @@
     --vp-c-brand: #6d28d9;
     --vp-c-brand-light: #6d28d9;
     --vp-button-brand-border: #6d28d9;
-    --vp-button-brand-hover-bg: #6d28d9;
+    --vp-button-brand-hover-bg: #7c3aed;
+    --vp-button-brand-hover-border: #6d28d9;
+    --vp-button-brand-active-border: #6d28d9;
+    --vp-button-brand-active-bg: #6d28d9;
     --vp-c-border: rgba(60, 60, 67, 0.29);
   }
   
