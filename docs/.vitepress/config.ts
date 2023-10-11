@@ -28,6 +28,9 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo.svg',
+    socialLinks: [
+      { icon: 'twitter', link: 'https://twitter.com/displagent' },
+    ],
     nav: [
         { text: 'Setup', link: '/setup/' },
         { text: 'Report Slideshows', link: '/report-slideshows/' },
