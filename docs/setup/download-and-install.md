@@ -35,7 +35,7 @@ If you don't know what the architecture is for your Raspberry Pi, open up a term
 
 ### Models
 
-**I recommend the Raspberry Pi 4 Model B (8 GB).** 
+**I recommend the [Raspberry Pi 4 Model B (8 GB)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/).**  
 
 The Raspberry Pi Model 4 B comes in three different RAM capacities, namely, the 2 GB, 4 GB, and 8 GB.
 
