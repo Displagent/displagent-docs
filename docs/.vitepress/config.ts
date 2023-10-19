@@ -3,7 +3,8 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 
-const hostname = 'https://docs.displagent.io';
+// WARNING: This should be an environment variable, but VitePress does not support it.
+const hostname = 'https://docs.displagent.io'
 const links = [];
 
 export default defineConfig({
@@ -140,7 +141,7 @@ export default defineConfig({
     const pageRelativePathRaw = pageData.relativePath;
     // Handle the home page.
     if (pageRelativePathRaw === 'index.md') {
-      route = 'https://docs.displagent.io'
+      route = hostname;
     }
     // Handle all other pages.
     else {
@@ -149,7 +150,8 @@ export default defineConfig({
       // Remove the sub-home-page 'index' indicators.
       const pageRelativePathWithoutIndexInName = pageRelativePathWithoutFileExtension.replace('/index', '');
       const pageRelativePath = pageRelativePathWithoutIndexInName;
-      route = 'https://docs.displagent.io/' + pageRelativePath;
+      // The hostname does not have a trailing slash, so add it here manually.
+      route = hostname + '/' + pageRelativePath;
     }
 
     pageData.frontmatter.head.push([
