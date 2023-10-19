@@ -109,7 +109,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:title',
-        content: `${dynamicTitle} | ${dynamicTitleTemplate}`
+        content: `${dynamicTitle}`
       }
     ]);
 
@@ -121,6 +121,42 @@ export default defineConfig({
         content: `${!pageData.description
           ? context.siteConfig.site.description
           : pageData.description }`
+      }
+    ]);
+
+    // Add og:type
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:type',
+        content: 'website'
+      }
+    ]);
+
+    // Add og:url
+    let route;
+
+    // This returns the file extension.
+    const pageRelativePathRaw = pageData.relativePath;
+    // Handle the home page.
+    if (pageRelativePathRaw === 'index.md') {
+      route = 'https://docs.displagent.io'
+    }
+    // Handle all other pages.
+    else {
+      // Remove the file extension.
+      const pageRelativePathWithoutFileExtension = pageRelativePathRaw.replace('.md', '');
+      // Remove the sub-home-page 'index' indicators.
+      const pageRelativePathWithoutIndexInName = pageRelativePathWithoutFileExtension.replace('/index', '');
+      const pageRelativePath = pageRelativePathWithoutIndexInName;
+      route = 'https://docs.displagent.io/' + pageRelativePath;
+    }
+
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:url',
+        content: `${route}`
       }
     ]);
   },
