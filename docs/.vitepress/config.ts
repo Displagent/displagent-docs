@@ -3,7 +3,9 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 
-const hostname = 'https://docs.displagent.io';
+// WARNING: This should be an environment variable, but VitePress does not support it.
+const hostname = 'https://docs.displagent.io'
+const ogImagePath = '/displagent-docs-og.png';
 const links = [];
 
 export default defineConfig({
@@ -109,7 +111,7 @@ export default defineConfig({
       'meta',
       {
         name: 'og:title',
-        content: `${dynamicTitle} | ${dynamicTitleTemplate}`
+        content: `${dynamicTitle}`
       }
     ]);
 
@@ -121,6 +123,52 @@ export default defineConfig({
         content: `${!pageData.description
           ? context.siteConfig.site.description
           : pageData.description }`
+      }
+    ]);
+
+    // Add og:type
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:type',
+        content: 'website'
+      }
+    ]);
+
+    // Add og:image
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:image',
+        content: `${hostname + ogImagePath}`
+      }
+    ]);
+
+    // Add og:url
+    let route;
+
+    // This returns the file extension.
+    const pageRelativePathRaw = pageData.relativePath;
+    // Handle the home page.
+    if (pageRelativePathRaw === 'index.md') {
+      route = hostname;
+    }
+    // Handle all other pages.
+    else {
+      // Remove the file extension.
+      const pageRelativePathWithoutFileExtension = pageRelativePathRaw.replace('.md', '');
+      // Remove the sub-home-page 'index' indicators.
+      const pageRelativePathWithoutIndexInName = pageRelativePathWithoutFileExtension.replace('/index', '');
+      const pageRelativePath = pageRelativePathWithoutIndexInName;
+      // The hostname does not have a trailing slash, so add it here manually.
+      route = hostname + '/' + pageRelativePath;
+    }
+
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:url',
+        content: `${route}`
       }
     ]);
   },
