@@ -5,7 +5,7 @@ import { SitemapStream } from 'sitemap'
 
 // WARNING: This should be an environment variable, but VitePress does not support it.
 const hostname = 'https://docs.displagent.io'
-const ogImagePath = '/displagent-docs-og.png';
+const ogImagePath = '/displagent-docs-og-trimmed.png';
 const links = [];
 
 export default defineConfig({
