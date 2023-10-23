@@ -34,6 +34,7 @@ There is a help menu on the titlebar of the app. Below are its links and their u
 * `About`: opens a dialog box with metadata about the app (e.g. version).
 * `Open Logs`: automatically opens the file explorer on your system to the logs folder.
 * `Open Documentation`: automatically opens the Displagent docsite in your default browser.
+* `Take Screenshot`: automatically takes a screenshot of the Displagent window and autocopies it to your clipboard for convenience.
 * `Reset Power BI Credentials`: deletes the local `powerbiconnectionsettings.json` file.
 
 ::: warning
