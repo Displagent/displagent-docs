@@ -59,3 +59,15 @@ If you are installing Displagent on a Linux machine (such as a Raspberry Pi), th
 ::: warning Important
 If you are running Displagent on a Raspberry Pi, you may need to run step #2.
 :::
+
+## Signup
+
+When you first signup for Displagent inside the app, you will likely be met with an Accept/Decline popup from the Displagent authentication system. Please click the `Accept` button to continue with your account creation.
+
+::: tip What is this?
+Displagent uses a highly-secure, highly-regulated, and well-established third-party authentication system called [Auth0](https://www.auth0.com). This popup is a mandatory signup requirement from Auth0 when using a desktop app like Displagent, don't let it alarm you.
+:::
+
+<p align="center">
+    <img src="./auth0-signup-popup.png" />
+</p>
