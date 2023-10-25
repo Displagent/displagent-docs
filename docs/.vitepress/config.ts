@@ -6,6 +6,8 @@ import { SitemapStream } from 'sitemap'
 // WARNING: This should be an environment variable, but VitePress does not support it.
 const hostname = 'https://docs.displagent.io'
 const ogImagePath = '/displagent-docs-og.png';
+const twitterSite = '@displagent';
+const twitterImageAlt = 'Displagent Docs'
 const links = [];
 
 export default defineConfig({
@@ -98,7 +100,9 @@ export default defineConfig({
   transformPageData(pageData, context) {
     pageData.frontmatter.head ??= [];
 
-    // Add og:title meta tags.
+    ////////////////////////////////////////////////////////////////////
+    // Add og:title
+    ////////////////////////////////////////////////////////////////////
     const dynamicTitle = !pageData.title
       ? context.siteConfig.site.title
       : pageData.title;
@@ -115,7 +119,9 @@ export default defineConfig({
       }
     ]);
 
-    // Add og:description meta tags.
+    ////////////////////////////////////////////////////////////////////
+    // Add og:description
+    ////////////////////////////////////////////////////////////////////
     pageData.frontmatter.head.push([
       'meta',
       {
@@ -126,7 +132,9 @@ export default defineConfig({
       }
     ]);
 
+    ////////////////////////////////////////////////////////////////////
     // Add og:type
+    ////////////////////////////////////////////////////////////////////
     pageData.frontmatter.head.push([
       'meta',
       {
@@ -135,7 +143,9 @@ export default defineConfig({
       }
     ]);
 
+    ////////////////////////////////////////////////////////////////////
     // Add og:image
+    ////////////////////////////////////////////////////////////////////
     pageData.frontmatter.head.push([
       'meta',
       {
@@ -144,7 +154,9 @@ export default defineConfig({
       }
     ]);
 
+    ////////////////////////////////////////////////////////////////////
     // Add og:url
+    ////////////////////////////////////////////////////////////////////
     let route;
 
     // This returns the file extension.
@@ -171,7 +183,74 @@ export default defineConfig({
         content: `${route}`
       }
     ]);
-  },
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:card
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      }
+    ]);
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:title
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:title',
+        content: `${dynamicTitle}`
+      }
+    ]);
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:description
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:description',
+        content: `${!pageData.description
+          ? context.siteConfig.site.description
+          : pageData.description }`
+      }
+    ]);
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:site
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:site',
+        content: `${twitterSite}`
+      }
+    ]);
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:image
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:image',
+        content: `${hostname + ogImagePath}`
+      }
+    ]);
+
+    ////////////////////////////////////////////////////////////////////
+    // Add twitter:image:alt
+    ////////////////////////////////////////////////////////////////////
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'twitter:image:alt',
+        content: `${twitterImageAlt}`
+      }
+    ]);  },
   // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
   transformHtml: (_, id, { pageData }) => {
     if (!/[\\/]404\.html$/.test(id))
