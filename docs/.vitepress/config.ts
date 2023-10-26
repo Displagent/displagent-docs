@@ -101,61 +101,28 @@ export default defineConfig({
     pageData.frontmatter.head ??= [];
 
     ////////////////////////////////////////////////////////////////////
-    // Add og:title
+    // Get dynamic title
     ////////////////////////////////////////////////////////////////////
     const dynamicTitle = !pageData.title
       ? context.siteConfig.site.title
       : pageData.title;
 
+    ////////////////////////////////////////////////////////////////////
+    // Get dynamic titleTemplate
+    ////////////////////////////////////////////////////////////////////
     const dynamicTitleTemplate = !pageData.titleTemplate
       ? context.siteConfig.site.title
       : pageData.titleTemplate;
 
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'og:title',
-        content: `${dynamicTitle}`
-      }
-    ]);
+    ////////////////////////////////////////////////////////////////////
+    // Get dynamic description
+    ////////////////////////////////////////////////////////////////////
+    const dynamicDescription = !pageData.description
+      ? context.siteConfig.site.description
+      : pageData.description
 
     ////////////////////////////////////////////////////////////////////
-    // Add og:description
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'og:description',
-        content: `${!pageData.description
-          ? context.siteConfig.site.description
-          : pageData.description }`
-      }
-    ]);
-
-    ////////////////////////////////////////////////////////////////////
-    // Add og:type
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'og:type',
-        content: 'website'
-      }
-    ]);
-
-    ////////////////////////////////////////////////////////////////////
-    // Add og:image
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'og:image',
-        content: `${hostname + ogImagePath}`
-      }
-    ]);
-
-    ////////////////////////////////////////////////////////////////////
-    // Add og:url
+    // Get dynamic route
     ////////////////////////////////////////////////////////////////////
     let route;
 
@@ -176,81 +143,137 @@ export default defineConfig({
       route = hostname + '/' + pageRelativePath;
     }
 
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'og:url',
-        content: `${route}`
-      }
-    ]);
+    return {
+      frontmatter: {
+        ...pageData.frontmatter,
+        head: [
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:card
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      }
-    ]);
+          ////////////////////////////////////////////////////////////////////
+          // Add og:title
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'og:title',
+              content: `${dynamicTitle}`
+            }
+          ],
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:title
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:title',
-        content: `${dynamicTitle}`
-      }
-    ]);
+          ////////////////////////////////////////////////////////////////////
+          // Add og:description
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'og:description',
+              content: `${dynamicDescription}`
+            }
+          ],
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:description
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:description',
-        content: `${!pageData.description
-          ? context.siteConfig.site.description
-          : pageData.description }`
-      }
-    ]);
+          ////////////////////////////////////////////////////////////////////
+          // Add og:type
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'og:type',
+              content: 'website'
+            }
+          ],
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:site
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:site',
-        content: `${twitterSite}`
-      }
-    ]);
+          ////////////////////////////////////////////////////////////////////
+          // Add og:image
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'og:image',
+              content: `${hostname + ogImagePath}`
+            }
+          ],
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:image
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:image',
-        content: `${hostname + ogImagePath}`
-      }
-    ]);
+          ////////////////////////////////////////////////////////////////////
+          // Add og:url
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'og:url',
+              content: `${route}`
+            }
+          ],
+        ],
+      },
+    };
 
-    ////////////////////////////////////////////////////////////////////
-    // Add twitter:image:alt
-    ////////////////////////////////////////////////////////////////////
-    pageData.frontmatter.head.push([
-      'meta',
-      {
-        name: 'twitter:image:alt',
-        content: `${twitterImageAlt}`
-      }
-    ]);  },
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:card
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:card',
+    //     content: 'summary_large_image'
+    //   }
+    // ]);
+
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:title
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:title',
+    //     content: `${dynamicTitle}`
+    //   }
+    // ]);
+
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:description
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:description',
+    //     content: `${!pageData.description
+    //       ? context.siteConfig.site.description
+    //       : pageData.description }`
+    //   }
+    // ]);
+
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:site
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:site',
+    //     content: `${twitterSite}`
+    //   }
+    // ]);
+
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:image
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:image',
+    //     content: `${hostname + ogImagePath}`
+    //   }
+    // ]);
+
+    // ////////////////////////////////////////////////////////////////////
+    // // Add twitter:image:alt
+    // ////////////////////////////////////////////////////////////////////
+    // pageData.frontmatter.head.push([
+    //   'meta',
+    //   {
+    //     name: 'twitter:image:alt',
+    //     content: `${twitterImageAlt}`
+    //   }
+    // ]);
+  },
   // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
   transformHtml: (_, id, { pageData }) => {
     if (!/[\\/]404\.html$/.test(id))
