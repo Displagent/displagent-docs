@@ -98,7 +98,7 @@ export default defineConfig({
     lastUpdatedText: 'Last Updated'
   },
   transformPageData(pageData, context) {
-    pageData.frontmatter.head ??= [];
+    // pageData.frontmatter.head ??= [];
 
     ////////////////////////////////////////////////////////////////////
     // Get dynamic title
