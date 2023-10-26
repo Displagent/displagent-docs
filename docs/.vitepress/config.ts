@@ -142,7 +142,7 @@ export default defineConfig({
       route = hostname + '/' + pageRelativePath;
     }
 
-    pageData.frontmatter.head = [];
+    // pageData.frontmatter.head = [];
 
     return {
       frontmatter: {
