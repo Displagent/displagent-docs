@@ -202,77 +202,76 @@ export default defineConfig({
               content: `${route}`
             }
           ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:card
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:card',
+              content: 'summary_large_image'
+            }
+          ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:title
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:title',
+              content: `${dynamicTitle}`
+            }
+          ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:description
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:description',
+              content: `${dynamicDescription}`
+            }
+          ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:site
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:site',
+              content: `${twitterSite}`
+            }
+          ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:image
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:image',
+              content: `${hostname + ogImagePath}`
+            }
+          ],
+
+          ////////////////////////////////////////////////////////////////////
+          // Add twitter:image:alt
+          ////////////////////////////////////////////////////////////////////
+          [
+            'meta',
+            {
+              name: 'twitter:image:alt',
+              content: `${twitterImageAlt}`
+            }
+          ],
+
         ],
       },
     };
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:card
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:card',
-    //     content: 'summary_large_image'
-    //   }
-    // ]);
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:title
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:title',
-    //     content: `${dynamicTitle}`
-    //   }
-    // ]);
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:description
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:description',
-    //     content: `${!pageData.description
-    //       ? context.siteConfig.site.description
-    //       : pageData.description }`
-    //   }
-    // ]);
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:site
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:site',
-    //     content: `${twitterSite}`
-    //   }
-    // ]);
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:image
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:image',
-    //     content: `${hostname + ogImagePath}`
-    //   }
-    // ]);
-
-    // ////////////////////////////////////////////////////////////////////
-    // // Add twitter:image:alt
-    // ////////////////////////////////////////////////////////////////////
-    // pageData.frontmatter.head.push([
-    //   'meta',
-    //   {
-    //     name: 'twitter:image:alt',
-    //     content: `${twitterImageAlt}`
-    //   }
-    // ]);
   },
   // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
   transformHtml: (_, id, { pageData }) => {
