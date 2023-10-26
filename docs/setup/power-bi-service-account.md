@@ -47,3 +47,7 @@ While it is not necessary, it is convenient to assign your service account the `
 Please ensure that your service account has at least `View` permissions in the Power BI workspaces where your Power BI content resides.
 
 Additionally, if your Power BI content is linked to **shared datasets** that reside in separate workspaces, please ensure that your service account has at least `Read` access to those datasets or their encapsulating workspaces in the Power BI service.
+
+## Federated Accounts
+
+As a quick reminder, please recall that Displagent does **not** support federated accounts in Azure. See the [required credentials](./required-credentials#federated-accounts) page for more details.

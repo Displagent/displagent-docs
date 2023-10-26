@@ -69,3 +69,15 @@ If the Power BI serivce account that you choose to use requires multi-factor aut
 ::: danger Multi-factor Authentication
 MFA is not supported, so if MFA is required at your company, see if you can provision a service account for Displagent with an MFA exception and restricted Azure access for added protection.
 :::
+
+### Federated Accounts
+
+Please be aware that Displagent does **not** support [federated accounts](https://learn.microsoft.com/en-us/answers/questions/1163702/what-is-difference-between-federated-domain-vs-man) in Azure. This is due to the specific authentication flow that Displagent has to use with Microsoft. If you try to use a federated account as your service account, you will likely see a Microsoft error appear stating that you are using the wrong username or password.
+
+::: danger How to know?
+If you are positive that you are using the correct username and password for your service account, yet you keep getting a Microsoft error that your credentials are invalid, then you may very well be using a federated account in Azure without realizing it.
+:::
+
+To overcome this, if your company typically uses federated accounts in Azure, ask your IT department if they can make you an account with your company's default Azure domain instead, the domain that has `<your_default_domain>.onmicrosft.com` in its name.
+
+For example, a username like `dmiradakis@displagent.onmicrosoft.com`.
