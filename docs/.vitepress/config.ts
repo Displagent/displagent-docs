@@ -98,7 +98,6 @@ export default defineConfig({
     lastUpdatedText: 'Last Updated'
   },
   transformPageData(pageData, context) {
-    // pageData.frontmatter.head ??= [];
 
     ////////////////////////////////////////////////////////////////////
     // Get dynamic title
@@ -142,6 +141,8 @@ export default defineConfig({
       // The hostname does not have a trailing slash, so add it here manually.
       route = hostname + '/' + pageRelativePath;
     }
+
+    pageData.frontmatter.head = [];
 
     return {
       frontmatter: {
