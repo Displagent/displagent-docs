@@ -14,6 +14,7 @@ export default defineConfig({
   title: 'Displagent Docs',
   description: 'The official docsite for Displagent.',
   cleanUrls: true,
+  lastUpdated: true,
   head: [
     // [
     //   'link',
