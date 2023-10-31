@@ -34,6 +34,12 @@ There is a help menu on the titlebar of the app. Below are its links and their u
 * `About`: opens a dialog box with metadata about the app (e.g. version).
 * `Open Logs`: automatically opens the file explorer on your system to the logs folder.
 * `Open Documentation`: automatically opens the Displagent docsite in your default browser.
+* `Check For Updates`: manually checks for an updated version of Displagent. The result is shown in a popup dialog box.
+* `Automatic Updates`: a toggle that activates/deactivates an automatic updates loop within the app. If activated and if an update is found, the following will occur automatically/without user interaction:
+    1. Displagent will autodownload its new version in the background.
+    2. Displagent will shut itself down.
+    3. The new version will be automatically installed on your machine.
+    4. Displagent will relaunch itself under the new version.
 * `Take Screenshot`: automatically takes a screenshot of the Displagent window and autocopies it to your clipboard for convenience.
 * `Reset Power BI Credentials`: deletes the local `powerbiconnectionsettings.json` file.
 
