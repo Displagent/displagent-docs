@@ -20,7 +20,5 @@ A Dashboard Slideshow is limited to **one, specific Power BI dashboard** from a 
 ::: tip
 Many Early Adopters have asked if Dashboard Slideshows can support **more than one Power BI dashboard at a time**. Per their design, they cannot.
 
-*However*, I am currently in the process of building Compound Slideshows, and inside a Compound Slideshow, you will be able to combine multiple, individual Power BI Report Slideshows as well as Dashboard Slideshows into large, master slideshows.
-
-Compound Slideshows are currently **under development**, so please signup and lookout for a feature update email in the near future!
+But despair not: this is exactly what Compound Slideshows are designed for! Checkout the [Compound Slideshows](/compound-slideshows/) section to learn more.
 :::

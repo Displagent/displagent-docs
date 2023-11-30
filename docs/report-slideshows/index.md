@@ -20,9 +20,7 @@ A Report Slideshow is limited to **one, specific Power BI report** from a given 
 ::: tip
 Many Early Adopters have asked if Report Slideshows can support **more than one Power BI report at a time**. Per their design, they cannot.
 
-*However*, I am currently in the process of building Compound Slideshows, and inside a Compound Slideshow, you will be able to combine multiple, individual Power BI Report Slideshows as well as Dashboard Slideshows into large, master slideshows.
-
-Compound Slideshows are currently **under development**, so please signup and lookout for a feature update email in the near future!
+But despair not: this is exactly what Compound Slideshows are designed for! Checkout the [Compound Slideshows](/compound-slideshows/) section to learn more.
 :::
 
 ## Highly Customizable
