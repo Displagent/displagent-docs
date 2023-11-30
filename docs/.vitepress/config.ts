@@ -88,6 +88,19 @@ export default defineConfig({
             ]
           }
         ],
+        '/compound-slideshows/': [
+          {
+            text: 'Compound Slideshows',
+            items: [
+              { text: 'Intro', link: '/compound-slideshows/' },
+              { text: 'The Compound Slideshows Table', link: '/compound-slideshows/compound-slideshows-table' },
+              { text: 'Create a Compound Slideshow', link: '/compound-slideshows/create-compound-slideshow' },
+              { text: 'Build a Compound Slideshow', link: '/compound-slideshows/build-compound-slideshow' },
+              { text: 'Launch a Compound Slideshow', link: '/compound-slideshows/launch-compound-slideshow' },
+              { text: 'Delete a Compound Slideshow', link: '/compound-slideshows/delete-compound-slideshow' }
+            ]
+          }
+        ],
         '/autolaunch/': [
           {
             text: 'Autolaunch',
