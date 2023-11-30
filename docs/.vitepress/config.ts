@@ -38,9 +38,14 @@ export default defineConfig({
     ],
     nav: [
         { text: 'Setup', link: '/setup/' },
-        { text: 'Report Slideshows', link: '/report-slideshows/' },
-        { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
-        { text: 'Compound Slideshows', link: '/compound-slideshows/' },
+        { 
+          text: 'Slideshows',
+          items: [
+            { text: 'Report Slideshows', link: '/report-slideshows/' },
+            { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
+            { text: 'Compound Slideshows', link: '/compound-slideshows/' }
+          ]
+        },
         { text: 'Autolaunch', link: '/autolaunch/' },
         { text: 'Utilities', link: '/utilities/' }
     ],
