@@ -27,6 +27,6 @@ For example, assume that you have a Power BI report for sales, a Power BI report
 
 ## Build Subslideshows First
 
-I want to make a very important distinction here: all that Compound Slideshows do is **combine multiple subslideshows together**.
+I want to make a very important note here: all that Compound Slideshows do is **combine multiple subslideshows together**.
 
 You cannot choose certain report tabs, report bookmarks, dashboard configurations, refresh intervals, and more with Compound Slideshows. That is what Report Slideshows and Dashboard Slideshows are for, so build these subslideshows first and then combine them together in Compound Slideshows. Compound Slideshows are more high-level whereas the subslideshows are more low-level.
