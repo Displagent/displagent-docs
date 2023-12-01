@@ -1,6 +1,6 @@
 ---
 title: Create a Compound Slideshow
-description: A detailed guide on how to create a new Report Slideshow in Displagent.
+description: A detailed guide on how to create a new Compound Slideshow in Displagent.
 ---
 
 # Create a Compound Slideshow
