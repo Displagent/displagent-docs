@@ -5,9 +5,10 @@ description: A detailed guide on how to launch a Compound Slideshow in Displagen
 
 # Launch Compound Slideshow
 
-To launch a Compound Slideshow, you have two options:
-* Launch the slideshow from the slideshow control panel on the Buid Slideshow Page.
-* Launch the slideshow from the slideshow's `play` button on the Report Slideshows Table.
+To launch a Compound Slideshow, you have three options:
+* Launch the slideshow from the `Launch Compound Slideshow` button on the Compound Slideshow build page.
+* Launch the slideshow from the slideshow's `play` button on the Compound Slideshows Table.
+* Designate the Compound Slideshow on Displagent's autolaunch page.
 
 ## Slideshow Control Panel
 
@@ -26,7 +27,7 @@ When a Compound Slideshow is launched, it works through the list of Compound Sli
 For Report Slideshows, the Compound Slideshow also executes the refresh action against the Power BI report.
 :::
 
-Once the subslideshow reaches the end of its cycle, the Compound Slideshow exits fullscreen mode on the current subslideshow and immediately launches fullscreen mode on the next subslideshow. Then the same steps continue and loop indefinitely or until the Compound Slideshow is stopped.
+Once the subslideshow reaches the end of its cycle, the Compound Slideshow exits fullscreen mode on the current subslideshow and immediately launches fullscreen mode on the next subslideshow. Then the same steps continue and loop indefinitely until the Compound Slideshow is stopped.
 
 ::: tip
 For subslideshow types such as Dashboard Slideshows that do not have a definitive end to their slideshow cycles, the `Duration` field for the subslideshow marks the end of the its slideshow cycle.
@@ -36,7 +37,7 @@ You will notice that the `Launch Compound Slideshow` button and `Stop Compound S
 
 ### Stop Compound Slideshow
 
-Whne a Compound Slideshow is stopped, it exits fullscreen mode on the current subslideshow and returns to a standby mode. If the Compound Slideshow is relaunched, it will restart with the first item in the item list.
+When a Compound Slideshow is stopped, it exits fullscreen mode on the current subslideshow and returns to a standby mode. If the Compound Slideshow is relaunched, it will restart with the first item in the item list.
 
 ::: tip
 Remember, if you ever want to exit fullscreen mode for any slideshow, simply press the `Escape` key.
@@ -48,11 +49,7 @@ When the `ReembedItems` button is clicked, all of the subslideshows are reembedd
 
 ## Slideshow Play Button
 
-On the main Compound Slideshows Table, in the `Slideshow Commands`/`Commands` column, there is a `play` button. Clicking this `play` button automatically navigates to the slideshow's Slideshow Build page and autolaunches the slideshow in fullscreen mode.
-
-::: tip
-This is the easiest way to launch a slideshow.
-:::
+On the main Compound Slideshows Table, in the `Slideshow Commands`/`Commands` column, there is a `play` button. Clicking this `play` button automatically navigates to the Compound Slideshow's build page and autolaunches the Compound Slideshow.
 
 <p align="center">
     <img src="./launch-slideshow-button.png" />

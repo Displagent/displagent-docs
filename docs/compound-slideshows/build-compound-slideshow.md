@@ -7,7 +7,7 @@ description: A detailed guide on how to build out a newly created Compound Slide
 
 This section explains how to build each atomic piece of a Compound Slideshow. To see top-level configurations for a Compound Slideshow, please see the previous document.
 
-## The Build icon
+## The Build Icon
 
 On the main Compound Slideshows table, look at the leftmost column for your slideshow in question, called `Slideshow Commands` or `Commands`. In this column, you will see two icons:
 * A play button icon
@@ -51,7 +51,7 @@ To create a new slideshow item, click the `+` button at the upper-right corner o
 ## Slideshow Item Configurations
 
 The configurations for a slideshow item are below:
-* `Name`: an optional name to assign to the slideshow item.
+* `Name`: an optional name to assign to the subslideshow.
 * `Slideshow Type`: the type of subslideshow being chosen, which is one of the following:
     * Report Slideshow
     * Dashboard Slideshow

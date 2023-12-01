@@ -17,7 +17,7 @@ A subslideshow here is defined as the other slideshow types that you have at you
 * Dashboard Slideshows
 :::
 
-Since Compound Slideshows are composed of multiple subslideshows, their content can span multiple Power BI reports, multiple Power BI dashboards, and multiple Power BI workspaces.
+Since Compound Slideshows are composed of multiple subslideshows, their content can span **multiple Power BI reports**, **multiple Power BI dashboards**, and **multiple Power BI workspaces**.
 
 ## Use Cases
 
@@ -29,4 +29,4 @@ For example, assume that you have a Power BI report for sales, a Power BI report
 
 I want to make a very important note here: all that Compound Slideshows do is **combine multiple subslideshows together**.
 
-You cannot choose certain report tabs, report bookmarks, dashboard configurations, refresh intervals, and more with Compound Slideshows. That is what Report Slideshows and Dashboard Slideshows are for, so build these subslideshows first and then combine them together in Compound Slideshows. Compound Slideshows are more high-level whereas the subslideshows are more low-level.
+You cannot choose certain report tabs, report bookmarks, dashboard configurations, refresh intervals, and more with Compound Slideshows. That is what Report Slideshows and Dashboard Slideshows are for, *so build these subslideshows first* and then combine them together in Compound Slideshows. Compound Slideshows are more high-level whereas the subslideshows are more low-level.
