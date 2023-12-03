@@ -15,7 +15,7 @@ The configurations for autolaunch are defined below:
 * `Slideshow Type`: the Slideshow Type that you want to autolaunch to. The Slideshow Types are:
     * Report Slideshows
     * Dashboard Slideshows
-    * Compound Slideshows (`coming soon`).
+    * Compound Slideshows
 * `Slideshow`: the specific Slideshow that you want to autolaunch to. The choices in this dropdown are controlled by the selected Slideshow Type.
 
 ::: tip

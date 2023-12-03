@@ -38,8 +38,14 @@ export default defineConfig({
     ],
     nav: [
         { text: 'Setup', link: '/setup/' },
-        { text: 'Report Slideshows', link: '/report-slideshows/' },
-        { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
+        { 
+          text: 'Slideshows',
+          items: [
+            { text: 'Report Slideshows', link: '/report-slideshows/' },
+            { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
+            { text: 'Compound Slideshows', link: '/compound-slideshows/' }
+          ]
+        },
         { text: 'Autolaunch', link: '/autolaunch/' },
         { text: 'Utilities', link: '/utilities/' }
     ],
@@ -79,6 +85,19 @@ export default defineConfig({
               { text: 'Create a Dashboard Slideshow', link: '/dashboard-slideshows/create-dashboard-slideshow' },
               { text: 'Launch a Dashboard Slideshow', link: '/dashboard-slideshows/launch-dashboard-slideshow' },
               { text: 'Delete a Dashboard Slideshow', link: '/dashboard-slideshows/delete-dashboard-slideshow' }
+            ]
+          }
+        ],
+        '/compound-slideshows/': [
+          {
+            text: 'Compound Slideshows',
+            items: [
+              { text: 'Intro', link: '/compound-slideshows/' },
+              { text: 'The Compound Slideshows Table', link: '/compound-slideshows/compound-slideshows-table' },
+              { text: 'Create a Compound Slideshow', link: '/compound-slideshows/create-compound-slideshow' },
+              { text: 'Build a Compound Slideshow', link: '/compound-slideshows/build-compound-slideshow' },
+              { text: 'Launch a Compound Slideshow', link: '/compound-slideshows/launch-compound-slideshow' },
+              { text: 'Delete a Compound Slideshow', link: '/compound-slideshows/delete-compound-slideshow' }
             ]
           }
         ],
