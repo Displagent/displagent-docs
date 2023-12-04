@@ -37,7 +37,7 @@ If you don't know what the architecture is for your Raspberry Pi, open up a term
 
 **I recommend the [Raspberry Pi 4 Model B (8 GB)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/).**  
 
-The Raspberry Pi Model 4 B comes in three different RAM capacities, namely, the 2 GB, 4 GB, and 8 GB.
+The Raspberry Pi Model 4 B comes in three different RAM capacities, namely, the 2 GB, the 4 GB, and the 8 GB.
 
 Displagent is confirmed to run extremely well on the 8 GB model, the 4 GB model is yet to be determined, but the 2 GB model has proven insufficient with early users and is therefore not recommended.
 
