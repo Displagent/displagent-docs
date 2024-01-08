@@ -40,6 +40,10 @@ There is a help menu on the titlebar of the app. Below are its links and their u
     2. Displagent will shut itself down.
     3. The new version will be automatically installed on your machine.
     4. Displagent will relaunch itself under the new version.
+* `Fullscreen Helper`: a toggle that activates/deactivates an internal helper for launching slideshows into fullscreen mode.
+::: tip
+This setting is useful if you commonly experience errors autolaunching slideshows into fullscreen mode.
+:::
 * `Take Screenshot`: automatically takes a screenshot of the Displagent window and autocopies it to your clipboard for convenience.
 * `Reset Power BI Credentials`: deletes the local `powerbiconnectionsettings.json` file.
 
