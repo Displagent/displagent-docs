@@ -124,7 +124,7 @@ You will know that admin consent has been successfully granted when you see gree
 
 Congratulations! You should now have all of the necessary permissions requirements and security provisions necessary for Displagent to embed your content.
 
-To finalize this process, open Displagent, navigate to the `Encrypted Settings` page, and enter each credential in its respective textbox. I have provided a `Test` button on this page to test your credentials and ensure you can connect to your Power BI tenant.
+To finalize this process, open Displagent, navigate to the `Microsoft Integration` page, and enter each credential in its respective textbox. I have provided a `Test` button on this page to test your credentials and ensure you can connect to your Power BI tenant.
 
 ::: tip Recall
 These sensitive security credentials are *NOT* stored in Displagent's database or backend. Instead, they are saved to a local credentials file **on your machine**, and they are encrypted for added security.
