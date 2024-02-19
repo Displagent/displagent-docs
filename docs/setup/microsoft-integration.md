@@ -54,10 +54,6 @@ And in fact, for the Standard Integration, it is *impossible* for Displagent to 
 
 Inside of Displagent itself, I have added a convenient status indicator to quickly show you whether or not you are authenticated to Microsoft. You can find it in the upper right-hand corner, next to your username.
 
-::: tip
-If the indicator is red, then you probably haven't setup your Microsoft Integration yet - so make sure to do that. :)
-:::
-
 ![](./microsoft-status-indicator.png)
 
 
