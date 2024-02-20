@@ -62,12 +62,13 @@ export default defineConfig({
           },
           { text: 'Standard Integration',
             items: [
-              { text: 'Info'}
+              { text: 'Standard Guide', link: '/setup/standard-integration' },
+              { text: 'Microsoft Entra Consent', link: '/setup/microsoft-entra-consent' }
             ]
           },
           { text: 'Advanced Integration',
             items: [
-              { text: 'Required Credentials', link: '/setup/required-credentials' },
+              { text: 'Advanced Guide', link: '/setup/advanced-integration' },
               { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
               { text: 'Azure App Registration', link: '/setup/azure-app-registration' },  
             ]
