@@ -41,7 +41,7 @@ Remember: Displagent only **reads** the *metadata* of your Power BI artifacts an
 
 If you see the `Consent on behalf of your organization` checkbox, please go ahead and check that box and click the `Accept` button.
 
-If you need to request consent from your IT department, please type a useful message for them and send the request. I have provided a Microsoft Entra ID Consent Guide for your IT department on the following page in case they need to do the consent process for you.
+If you need to request consent from your IT department, please type a useful message for them and send the request. I have provided a [Microsoft Entra ID Consent Guide](/setup/microsoft-entra-consent) for your IT department on the following page in case they need to do the consent process for you.
 
 ## Successful Login
 
