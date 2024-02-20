@@ -57,9 +57,20 @@ export default defineConfig({
               { text: 'Intro', link: '/setup/' },
               { text: 'What Is Displagent?', link: '/setup/what-is-displagent' },
               { text: 'Download and Install', link: '/setup/download-and-install' },
-              { text: 'Required Credentials', link: '/setup/required-credentials' },
+              { text: 'Microsoft Integration', link: '/setup/microsoft-integration' },
+            ]
+          },
+          { text: 'Standard Integration',
+            items: [
+              { text: 'Standard Guide', link: '/setup/standard-integration' },
+              { text: 'Microsoft Entra Consent', link: '/setup/microsoft-entra-consent' }
+            ]
+          },
+          { text: 'Advanced Integration',
+            items: [
+              { text: 'Advanced Guide', link: '/setup/advanced-integration' },
               { text: 'Power BI Service Account', link: '/setup/power-bi-service-account' },
-              { text: 'Azure App Registration', link: '/setup/azure-app-registration' },
+              { text: 'Azure App Registration', link: '/setup/azure-app-registration' },  
             ]
           }
         ],

@@ -1,11 +1,15 @@
 ---
-title: Required Credentials
-description: An overview of what credentials are required for Displagent to operate.
+title: Advanced Integration
+description: A description of the Advanced Microsoft Integration in Displagent and a guide on how to set it up.
 ---
 
-# Required Credentials
+# Advanced Integration
 
-In order for Displagent to access and embed your Power BI content, it requires five credentials from you:
+This is the detailed guide for setting up the Advanced Microsoft Integration in Displagent.
+
+## Required Credentials
+
+The Advanced Integration requires five credentials from you:
 
 * Azure App Registration
     * Azure Tenant ID
@@ -18,27 +22,13 @@ In order for Displagent to access and embed your Power BI content, it requires f
 
 These are discussed in more details below and in the following pages.
 
-## Encryption
-
-Let's get the most important question out of the way first: if you give Displagent the five credentials above, where are they stored?
-
-The answer is: they are stored on your own machines - you can't get much safer than that!
-
-This is actually the primary motivation behind why I changed Displagent from a web application to a cross-platform desktop application: as a desktop application, Displagent can take these credentials and store them locally on your machine as a credentials file.
-
-Even better, Displagent also **encrypts** the credentials file once they are stored - just in case anyone on your machine goes snooping around for them!
-
-::: tip TL;DR;
-In summary, these credentials are NOT stored in Displagent's database or backend - anywhere. They are yours, they stay with you, and they are encrypted on your own machines.
-:::
-
 ## Azure App Registration
 
 [As per Microsoft's own recommendation](https://learn.microsoft.com/en-us/power-bi/developer/embedded/register-app?tabs=customers), the easiest, least-painful, and most reliable way to authenticate a third-party application to your Power BI tenant is by creating an Azure App Registration in your company's Azure tenant.
 
 Think of an Azure App Registration like a virtual gateway; using its associated credentials, you can allow a custom application to access your Power BI content.
 
-This is exactly how Displagent accesses your Power BI content. See the dedicated docpage for how to set this up.
+This is exactly how the Advanced Integration accesses your Power BI content. See the dedicated docpage for how to set this up.
 
 ## Power BI Service Account
 
@@ -64,20 +54,22 @@ In general, an easy rule of thumb is to give your service account the same licen
 
 ### Multi-factor Authentication
 
-If the Power BI serivce account that you choose to use requires multi-factor authentication, then Displagent will NOT be able to authenticate you to Microsoft and the entire app will not work. Unfortunately, this is not a limitation of Displagent but rather [a limitation within Microsoft's authentication platform](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc).
+If the Power BI serivce account that you choose to use requires multi-factor authentication, the Advanced Integration will NOT be able to authenticate you to Microsoft and the entire app will not work. This is a [known limitation](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc) with the Microsoft OAuth2.0 ROPC pattern.
 
-::: danger Multi-factor Authentication
-MFA is not supported, so if MFA is required at your company, see if you can provision a service account for Displagent with an MFA exception and restricted Azure access for added protection.
-:::
+If MFA is a requirement at your company, then you have two options:
+
+1. Ask your IT department if they can provision a service account for you with an MFA exception/exemption.
+2. Use the Standard Integration instead of the Advanced Integration.
 
 ### Federated Accounts
 
-Please be aware that Displagent does **not** support [federated accounts](https://learn.microsoft.com/en-us/answers/questions/1163702/what-is-difference-between-federated-domain-vs-man) in Azure. This is due to the specific authentication flow that Displagent has to use with Microsoft. If you try to use a federated account as your service account, you will likely see a Microsoft error appear stating that you are using the wrong username or password.
+Please be aware that the Advanced Integration does **not** support [federated accounts](https://learn.microsoft.com/en-us/answers/questions/1163702/what-is-difference-between-federated-domain-vs-man) in Azure. This is due to the specific authentication flow that the Advanced Integration has to use with Microsoft. If you try to use a federated account as your service account, you will likely see a Microsoft error appear stating that you are using the wrong username or password.
 
 ::: danger How to know?
 If you are positive that you are using the correct username and password for your service account, yet you keep getting a Microsoft error that your credentials are invalid, then you may very well be using a federated account in Azure without realizing it.
 :::
 
-To overcome this, if your company typically uses federated accounts in Azure, ask your IT department if they can make you an account with your company's default Azure domain instead, the domain that has `<your_default_domain>.onmicrosft.com` in its name.
+If you are using a federated account, then you have two options:
 
-For example, a username like `dmiradakis@displagent.onmicrosoft.com`.
+1. Ask your IT department if they can make you an account with your company's default Azure domain instead, the domain that has `<your_default_domain>.onmicrosft.com` in its name. For example, a username like `dmiradakis@displagent.onmicrosoft.com`.
+2. Use the Standard Integration instead of the Advanced Integration.
