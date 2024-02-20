@@ -1,0 +1,9 @@
+{
+    "routes": [
+        {
+            "route": "/setup/required-credentials",
+            "redirect": "/setup/microsoft-integration",
+            "statusCode": 301
+        }
+    ]
+}
