@@ -62,4 +62,4 @@ Inside of Displagent itself, I have added a convenient status indicator to quick
 | Name | Difficulty | Guide | Supports MFA | Possible Timeouts | Azure Secret Expirys | Local Encryption |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Standard (recommended) | Easy | [Read Guide](/setup/standard-integration) | Yes | Yes | N/A | Yes |
-| Advanced | Medium | [Read Guide](/setup/required-credentials) | No | No | Yes | Yes |
+| Advanced | Medium | [Read Guide](/setup/advanced-integration) | No | No | Yes | Yes |
