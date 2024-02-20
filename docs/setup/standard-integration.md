@@ -17,11 +17,17 @@ When you visit the page, you should automatically have the `Standard` integratio
 
 You will see a Microsoft User textbox that should indicate you are not currently logged in to Microsoft. To login, please click the `Login To Microsoft` button.
 
+![](./standard-integration-login.png)
+
 Clicking this button *will open up a new tab on your machine's default browser*, so please lookout for a new browser tab appearing on your screen. Once the browser tab loads, you will likely see a Microsoft login page. Please proceed with the Microsoft login.
 
 ::: tip MFA
 And yes, multi-factor authentication (MFA) will work just fine here. :)
 :::
+
+### Service Account
+
+Please use a Microsoft account with an appropriate Power BI license assigned to it. I would also **strongly recommend** using a service account so that Displagent's service is not interrupted in case the authenticating employee leaves your company. A service account is *not* required, but I do recommend using one if you are able.
 
 ## Grant Consent
 
