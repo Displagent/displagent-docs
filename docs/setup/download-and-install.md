@@ -29,8 +29,12 @@ If you plan to run Displagent on a Raspberry Pi, please see the requirements bel
 
 Please install the **64-bit version of Raspberry OS (formerly called Raspbian)** on your Raspberry Pi. This is because the `.AppImage` executable is built on a 64-bit Ubuntu virtual machine.
 
-::: tip
-If you don't know what the architecture is for your Raspberry Pi, open up a terminal and type `uname -m`. If you see `aarch64`, then you know that you are running a 64-bit version of Raspberry OS.
+::: danger Verify your OS is 64-bit
+Please ensure that you *are* in fact running the 64-bit version of Raspberry OS. The 32-bit version of Raspberry OS can be paired with the 64-bit version of the Raspberry kernel, and this can be **extremely misleading**.
+
+Previously, I would suggest opening a terminal and typing in the command `uname -m`, and if the terminal displayed `aarch64` anywhere, then you should be good. However, I have since learned that this command is not entirely accurate.
+
+Instead, *to verify that you are running the 64-bit version of Raspberry OS*, open a terminal and type in the command `file -L /bin/ls`. When you enter this command, a long string of text should appear in the terminal, and somewhere in the beginning of the text string, you should see either `32-bit` or `64-bit`.
 :::
 
 ### Models
@@ -58,6 +62,12 @@ If you are installing Displagent on a Linux machine (such as a Raspberry Pi), th
 
 ::: warning Important
 If you are running Displagent on a Raspberry Pi, you may need to run step #2.
+:::
+
+::: danger AppImage won't execute
+If, after downloading the `.AppImage` file and enabling its execution permissions, you find that Displagent will not even load or open at all, then you may be accidentally running a 32-bit version of Raspberry OS.
+
+Remember, you **must** be running a 64-bit OS, as Displagent **will NOT** run on a 32-bit machine. See the section above for more information.
 :::
 
 ## Signup
