@@ -38,15 +38,16 @@ export default defineConfig({
     ],
     nav: [
         { text: 'Setup', link: '/setup/' },
-        { 
-          text: 'Slideshows',
+        {
+          text: 'Features',
           items: [
             { text: 'Report Slideshows', link: '/report-slideshows/' },
             { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
-            { text: 'Compound Slideshows', link: '/compound-slideshows/' }
+            { text: 'Compound Slideshows', link: '/compound-slideshows/' },
+            { text: 'Autostart', link: '/setup/autostart' },
+            { text: 'Autolaunch', link: '/autolaunch/' }
           ]
         },
-        { text: 'Autolaunch', link: '/autolaunch/' },
         { text: 'Utilities', link: '/utilities/' }
     ],
     sidebar: {
