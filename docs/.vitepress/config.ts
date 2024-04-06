@@ -57,6 +57,7 @@ export default defineConfig({
               { text: 'Intro', link: '/setup/' },
               { text: 'What Is Displagent?', link: '/setup/what-is-displagent' },
               { text: 'Download and Install', link: '/setup/download-and-install' },
+              { text: 'Autostart', link: '/setup/autostart' },
               { text: 'Microsoft Integration', link: '/setup/microsoft-integration' },
             ]
           },
