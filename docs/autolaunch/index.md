@@ -15,6 +15,6 @@ Please note that Autostart and Autolaunch are **two distinct features** in Displ
 
 When you choose the autolaunch settings (as discussed on the following page), Displagent will create an `autolaunchsettings.json` file on your machine to easily execute autolaunch anytime the app starts.
 
-::: warning Important
-Each autolaunch is isolated to the machine that Displagent is installed on. Consequently, you will need to setup autolaunch on each machine that you install Displagent on.
+::: warning Per machine
+Each Autolaunch is isolated to the machine that Displagent is installed on and must currently be configured per machine.
 :::

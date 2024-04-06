@@ -7,7 +7,7 @@ description: An introduction into what Displagent is, why Displagent was built, 
 
 ## Distribution
 
-Displagent is a third-party, cross-platform desktop application created for Power BI users. It is built with a robust web technology framework called [Electron](https://www.electronjs.org/), enabling it to run on Windows, Mac OS, and Linux devices (Raspberry Pi devices are quite popular).
+Displagent is a third-party, cross-platform desktop application created for Power BI users to easily configure and execute Power BI digital signage. It is built with a robust web technology framework called [Electron](https://www.electronjs.org/), enabling it to run on Windows, Mac OS, and Linux devices (Raspberry Pi devices are quite popular).
 
 ## Metadata
 
@@ -15,9 +15,9 @@ Displagent does not create or edit content in your Power BI tenant. Instead, it 
 
 ## Common Use Cases
 
-Displagent is ideal for kiosk-style use cases where you have a TV display with important metrics that you want to share with your company. However, it is also perfectly suitable to run as a local desktop application on a user's computer, such as a manager's laptop that wants to monitor production metrics in realtime.
+Displagent is ideal for kiosk-style use cases where you have a TV display with important metrics that you want to share with your company. However, it is also perfectly suitable to run as a local desktop application on a user's computer, such as a manager's laptop who wants to monitor production metrics in realtime.
 
-Countless types of industries have a need for kiosk-style data displays, particularly companies in the manufacturing, distribution, logistics, infrastructure, and technology sectors. If you are a Power BI or IT consultancy, you might find that one or more of your clients have this need.
+Countless types of industries have a need for kiosk-style data displays, particularly companies in the manufacturing, distribution, logistics, infrastructure, and technology sectors. If you are a Power BI or IT consultancy company, or even a Software-as-a-Service (SaaS) company, you might find that one or more of your clients have this need.
 
 ## Why Build It?
 

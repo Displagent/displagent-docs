@@ -18,7 +18,7 @@ To confirm that you have downloaded the correct file type for your machine, plea
 | Operating System | File Extension | Status |
 | :---: | :---: | :---: |
 | Windows | `.exe` | Supported |
-| Mac OS | `.dmg` | Coming soon |
+| Mac OS | `.dmg` | Contact me if interested |
 | Linux | `.AppImage` | Supported |
 
 ## Raspberry Pi
@@ -39,11 +39,9 @@ Instead, *to verify that you are running the 64-bit version of Raspberry OS*, op
 
 ### Models
 
-**I recommend the [Raspberry Pi 4 Model B (8 GB)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/).**  
+I recommend the [Raspberry Pi 4 Model B (8 GB)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) or higher. At the time of updating this doc, the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/) is also now available.
 
-The Raspberry Pi Model 4 B comes in three different RAM capacities, namely, the 2 GB, the 4 GB, and the 8 GB.
-
-Displagent is confirmed to run extremely well on the 8 GB model, the 4 GB model is yet to be determined, but the 2 GB model has proven insufficient with early users and is therefore not recommended.
+Users have found that Displagent runs extremely well on Raspberry Pis with 8 GB of RAM and is my default recommendation for RAM capacity. This is mainly due to the memory load that comes from loading your Power BI reports and Power BI dashboards in `<iframe>` HTML elements, they are fairly heavy browser visualizations.
 
 ## Install Displagent
 
