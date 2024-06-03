@@ -57,6 +57,16 @@ Once consent has been granted to Displagent by either you or your IT department,
 
 Congratulations, you have integrated with Microsoft successfully! Time to get building!
 
+## Power BI Service
+
+Please ensure that your service account has at least `View` permissions in the Power BI workspaces where your Power BI content resides.
+
+Additionally, if your Power BI content is linked to **shared datasets** that reside in separate workspaces, please ensure that your service account has at least `Read` access to those datasets or their encapsulating workspaces in the Power BI service.
+
+::: danger My workspace
+Any application that uses the Power BI REST API - such as Displagent - is *not able* to access content from `My workspace`, and that goes for all users. Please ensure that your Power BI content you wish to display **is NOT located in `My workspace`**.
+:::
+
 ## Switching From Advanced
 
 If you are currently using the Advanced Integration, but you want to switch to the Standard Integration, please do the following:
