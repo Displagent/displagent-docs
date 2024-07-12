@@ -45,7 +45,8 @@ export default defineConfig({
             { text: 'Dashboard Slideshows', link: '/dashboard-slideshows/'},
             { text: 'Compound Slideshows', link: '/compound-slideshows/' },
             { text: 'Autostart', link: '/setup/autostart' },
-            { text: 'Autolaunch', link: '/autolaunch/' }
+            { text: 'Autolaunch', link: '/autolaunch/' },
+            { text: 'Slideshow Repairs', link: '/slideshow-repairs/' }
           ]
         },
         { text: 'Utilities', link: '/utilities/' }
@@ -120,6 +121,14 @@ export default defineConfig({
             items: [
               { text: 'Intro', link: '/autolaunch/' },
               { text: 'Autolaunch Settings', link: '/autolaunch/autolaunch-settings' }
+            ]
+          }
+        ],
+        '/slideshow-repairs/': [
+          {
+            text: 'Slideshow Repairs',
+            items: [
+              { text: 'Summary', link: '/slideshow-repairs/' }
             ]
           }
         ]
