@@ -4,7 +4,7 @@ titleTemplate: The official docsite for Displagent
 hero:
   name: Displagent Docs
   # text: Welcome
-  tagline: The premium application for Power BI slideshows and digital signage.
+  tagline: The Power BI digital signage platform.
   actions:
     - theme: brand
       text: Get Started
