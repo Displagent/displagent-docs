@@ -16,11 +16,9 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    // [
-    //   'link',
-    //   // { rel: 'icon', href: '/logo.svg' },
-    //   { rel: 'icon', href: '/favicon.ico' }
-    // ],
+    ////////////////////////////////////////////////////////////////////
+    // Add Google Analytics
+    ////////////////////////////////////////////////////////////////////
     [
       'script',
       { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-ZYJNTMM4SR' }
@@ -29,7 +27,21 @@ export default defineConfig({
       'script',
       {},
       "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZYJNTMM4SR')"
+    ],
+
+    ////////////////////////////////////////////////////////////////////
+    // Add Microsoft Clarity
+    ////////////////////////////////////////////////////////////////////
+    [
+      'script',
+      {},
+      `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "pho4h3gcx0");`
     ]
+
   ],
   themeConfig: {
     logo: '/logo.svg',
@@ -184,137 +196,140 @@ export default defineConfig({
       route = hostname + '/' + pageRelativePath;
     }
 
-    // pageData.frontmatter.head = [];
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ////////////////////////////////////////////////////////////////////
+      // Add canonical
+      ////////////////////////////////////////////////////////////////////
+      [
+        'link',
+        {
+          rel: 'canonical',
+          href: `${route}`
+        }
+      ],
 
-    return {
-      frontmatter: {
-        ...pageData.frontmatter,
-        head: [
+      ////////////////////////////////////////////////////////////////////
+      // Add og:title
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'og:title',
+          content: `${dynamicTitle}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add og:title
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'og:title',
-              content: `${dynamicTitle}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add og:description
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'og:description',
+          content: `${dynamicDescription}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add og:description
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'og:description',
-              content: `${dynamicDescription}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add og:type
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'og:type',
+          content: 'website'
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add og:type
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'og:type',
-              content: 'website'
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add og:image
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'og:image',
+          content: `${hostname + ogImagePath}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add og:image
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'og:image',
-              content: `${hostname + ogImagePath}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add og:url
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'og:url',
+          content: `${route}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add og:url
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'og:url',
-              content: `${route}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:card
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:card
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:card',
-              content: 'summary_large_image'
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:title
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:title',
+          content: `${dynamicTitle}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:title
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:title',
-              content: `${dynamicTitle}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:description
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:description',
+          content: `${dynamicDescription}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:description
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:description',
-              content: `${dynamicDescription}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:site
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:site',
+          content: `${twitterSite}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:site
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:site',
-              content: `${twitterSite}`
-            }
-          ],
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:image
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:image',
+          content: `${hostname + ogImagePath}`
+        }
+      ],
 
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:image
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:image',
-              content: `${hostname + ogImagePath}`
-            }
-          ],
-
-          ////////////////////////////////////////////////////////////////////
-          // Add twitter:image:alt
-          ////////////////////////////////////////////////////////////////////
-          [
-            'meta',
-            {
-              name: 'twitter:image:alt',
-              content: `${twitterImageAlt}`
-            }
-          ],
-
-        ],
-      },
-    };
+      ////////////////////////////////////////////////////////////////////
+      // Add twitter:image:alt
+      ////////////////////////////////////////////////////////////////////
+      [
+        'meta',
+        {
+          name: 'twitter:image:alt',
+          content: `${twitterImageAlt}`
+        }
+      ]
+    )
   },
   // From https://github.com/vuejs/vitepress/issues/520#issuecomment-1566062351
   transformHtml: (_, id, { pageData }) => {
