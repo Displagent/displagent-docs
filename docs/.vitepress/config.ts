@@ -16,11 +16,9 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    // [
-    //   'link',
-    //   // { rel: 'icon', href: '/logo.svg' },
-    //   { rel: 'icon', href: '/favicon.ico' }
-    // ],
+    ////////////////////////////////////////////////////////////////////
+    // Add Google Analytics
+    ////////////////////////////////////////////////////////////////////
     [
       'script',
       { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-ZYJNTMM4SR' }
@@ -29,7 +27,21 @@ export default defineConfig({
       'script',
       {},
       "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZYJNTMM4SR')"
+    ],
+
+    ////////////////////////////////////////////////////////////////////
+    // Add Microsoft Clarity
+    ////////////////////////////////////////////////////////////////////
+    [
+      'script',
+      {},
+      `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "pho4h3gcx0");`
     ]
+
   ],
   themeConfig: {
     logo: '/logo.svg',
