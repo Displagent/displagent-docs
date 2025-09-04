@@ -35,11 +35,24 @@ At first glance, it might look a little overwhelming: don't worry! I have each s
     <img src="./app-textbox-values.png" />
 </p>
 
-4. Please check the required permissions as indicated in the screenshot below. Then click the `Register` button.
+4. Please check the required permissions as indicated in the section below. Then click the `Register` button.
+
+### Permissions
 
 <p align="center">
     <img src="./embed-tool-permissions.png" />
 </p>
+
+As shown in the image above, the required permissions for the Advanced Integration are the following:
+
+| Advanced Integration Permissions |
+| --- |
+| Read all datasets |
+| Read all dashboards |
+| Read all reports |
+| Read all workspaces |
+| Read all capacities |
+
 
 ## Fetch IDs
 
