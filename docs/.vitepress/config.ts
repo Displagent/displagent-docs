@@ -61,7 +61,8 @@ export default defineConfig({
             { text: 'Slideshow Repairs', link: '/slideshow-repairs/' }
           ]
         },
-        { text: 'Utilities', link: '/utilities/' }
+        { text: 'Utilities', link: '/utilities/' },
+        { text: 'Support', link: '/support/' }
     ],
     sidebar: {
         '/setup/': [
@@ -143,6 +144,10 @@ export default defineConfig({
               { text: 'Summary', link: '/slideshow-repairs/' }
             ]
           }
+        ],
+        '/support/': [
+          { text: 'Contact', link: '/support/' },
+          { text: 'Troubleshooting', link: '/support/troubleshooting' }
         ]
     },
     search: {
